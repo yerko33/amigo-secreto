@@ -24,3 +24,15 @@ function listaAmigos(){
         listaHTML.appendChild(li);
     }
 }
+
+function sortearAmigo(){
+    if (amigos.length != 0){
+        let indiceSeleccionado = Math.floor(Math.random() * amigos.length);
+        let amigoSeleccionado = amigos[indiceSeleccionado];
+
+        let resultadoHTML = document.getElementById('resultado');
+        resultadoHTML.innerHTML = "El amigo secreto sorteado es: " + amigoSeleccionado;
+
+        document.querySelector('#listaAmigos').setAttribute('hidden', 'true');
+    }
+}
